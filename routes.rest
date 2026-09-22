@@ -1,0 +1,132 @@
+### Get all movies
+GET http://localhost:8080/movies
+
+### Get a single movie
+GET http://localhost:8080/movies/6ab10c2a457e0e76c0d5e4d8
+
+### Create a movie
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+  "title": "The First Passenger",
+  "description": "A comedy about a motorcycle ride that goes completely wrong.",
+  "genre": "Comedy",
+  "releaseYear": 2026,
+  "runtimeMinutes": 15,
+  "language": "English",
+  "country": "Uganda",
+  "director": "Marvel",
+  "rating": 8.2,
+  "status": "completed"
+}
+
+### Update a movie
+PUT http://localhost:8080/movies/6ab20ca3755ba5b0f84e7121
+Content-Type: application/json
+
+{
+  "title": "The First Passenger",
+  "description": "Updated description for the movie.",
+  "genre": "Comedy",
+  "releaseYear": 2026,
+  "runtimeMinutes": 18,
+  "language": "English",
+  "country": "Uganda",
+  "director": "Marvel",
+  "rating": 8.7,
+  "status": "completed"
+}
+
+### Delete a movie
+DELETE http://localhost:8080/movies/6ab20ca3755ba5b0f84e7121
+
+
+
+
+
+### Create review
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "movieId": "6ab10c2a457e0e76c0d5e4d8",
+  "reviewerName": "Sarah",
+  "rating": 9,
+  "comment": "A very enjoyable film with a strong story.",
+  "reviewDate": "2026-09-21",
+  "verified": true
+}
+
+### Get all reviews
+GET http://localhost:8080/reviews
+
+### Get a single review
+GET http://localhost:8080/reviews/6ab2128149be128e5f76f245
+
+### Update review
+PUT http://localhost:8080/reviews/6ab2109d49be128e5f76f244
+Content-Type: application/json
+
+{
+  "movieId": "6ab10c2a457e0e76c0d5e4d",
+  "reviewerName": "Sarah",
+  "rating": 10,
+  "comment": "A very enjoyable film with a strong story.",
+  "reviewDate": "2026-09-21",
+  "verified": true
+}
+
+### Delete review
+DELETE http://localhost:8080/reviews/6ab2109d49be128e5f76f244
+
+
+
+
+
+### Invalid movie POST
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": "Test movie",
+  "genre": "Drama",
+  "releaseYear": 2026,
+  "runtimeMinutes": 20,
+  "language": "English",
+  "country": "Uganda",
+  "director": "Marvel",
+  "rating": 8,
+  "status": "completed"
+}
+
+### Invalid movie PUT
+PUT http://localhost:8080/movies/6ab10c2a457e0e76c0d5e4d8
+Content-Type: application/json
+
+{
+  "title": "Test Movie",
+  "description": "Test",
+  "genre": "Drama",
+  "releaseYear": "2026",
+  "runtimeMinutes": 20,
+  "language": "English",
+  "country": "Uganda",
+  "director": "Marvel",
+  "rating": 8,
+  "status": "completed"
+}
+
+### Invalid review POST
+POST http://localhost:8080/reviews
+Content-Type: application/json
+
+{
+  "movieId": "",
+  "reviewerName": "Test",
+  "rating": 8,
+  "comment": "Good movie",
+  "reviewDate": "2026-09-21",
+  "verified": true
+}
