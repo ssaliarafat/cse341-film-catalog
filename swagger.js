@@ -7,8 +7,8 @@ const doc = {
             'REST API for managing movies and reviews in a film catalog.',
         version: '1.0.0'
     },
-    host: 'localhost:8080',
-    schemes: ['http'],
+    host: 'cse341-film-catalog.onrender.com',
+    schemes: ['https'],
     consumes: ['application/json'],
     produces: ['application/json'],
     tags: [

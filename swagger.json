@@ -5,7 +5,7 @@
     "description": "REST API for managing movies and reviews in a film catalog.",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-film-catalog.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -18,7 +18,7 @@
     }
   ],
   "schemes": [
-    "http"
+    "https"
   ],
   "consumes": [
     "application/json"
